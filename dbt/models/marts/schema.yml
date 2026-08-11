@@ -1,0 +1,12 @@
+version: 2
+models:
+  - name: customer_mart
+    columns:
+      - name: customer_id
+        tests: [unique, not_null]
+      - name: email
+        tests: [unique, not_null]
+  - name: transaction_mart
+    columns:
+      - name: transaction_id
+        tests: [unique, not_null]
