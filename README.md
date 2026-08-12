@@ -8,12 +8,27 @@ A production-oriented reference backend that ingests CRM, transaction, support, 
 cp .env.example .env
 python -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
 make test
 docker compose up --build
 ```
 
+On Windows PowerShell, activate the environment with:
+
+```powershell
+Copy-Item .env.example .env
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+python -m pytest -q
+docker compose up --build
+```
+
 API documentation is available at `http://localhost:8000/docs`. See `docs/setup.md` for local setup and `docs/architecture.md` for component details.
+
+PostgreSQL is exposed on `localhost:5432` by default. Kafka host clients use `localhost:29092`. Values can be changed in `.env`.
 
 ## Main workflows
 
