@@ -28,6 +28,8 @@ docker compose up --build
 
 API documentation is available at `http://localhost:8000/docs`. See `docs/setup.md` for local setup and `docs/architecture.md` for component details.
 
+The Customer 360 entity relationships, table grain, and PostgreSQL/Snowflake deployment order are documented in `docs/customer360_er_diagram.md`.
+
 PostgreSQL is exposed on `localhost:5432` by default. Kafka host clients use `localhost:29092`. Values can be changed in `.env`.
 
 ## Main workflows

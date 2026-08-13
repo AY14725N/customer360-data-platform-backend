@@ -1,4 +1,10 @@
 CREATE INDEX IF NOT EXISTS idx_customer_events_customer_time ON customer_events(customer_id, occurred_at DESC);
 CREATE INDEX IF NOT EXISTS idx_customer_events_source ON customer_events(source);
 CREATE INDEX IF NOT EXISTS idx_transactions_customer_time ON transactions(customer_id, transacted_at DESC);
+CREATE INDEX IF NOT EXISTS idx_transactions_status_time ON transactions(status, transacted_at DESC);
+CREATE INDEX IF NOT EXISTS idx_support_customer_time ON support_interactions(customer_id, opened_at DESC);
+CREATE INDEX IF NOT EXISTS idx_support_status_priority ON support_interactions(status, priority);
+CREATE INDEX IF NOT EXISTS idx_marketing_customer_time ON marketing_interactions(customer_id, occurred_at DESC);
+CREATE INDEX IF NOT EXISTS idx_marketing_campaign_type ON marketing_interactions(campaign_id, interaction_type);
 CREATE INDEX IF NOT EXISTS idx_customers_attributes ON customers USING GIN(attributes);
+CREATE INDEX IF NOT EXISTS idx_marketing_metadata ON marketing_interactions USING GIN(metadata);

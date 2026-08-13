@@ -6,3 +6,5 @@ sources:
       - name: customers
       - name: customer_events
       - name: transactions
+      - name: support_interactions
+      - name: marketing_interactions
