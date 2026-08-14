@@ -86,8 +86,9 @@ erDiagram
 PostgreSQL initialization is automatic through the numbered files copied by `docker/postgres.Dockerfile`:
 
 1. `sql/postgres/schema.sql`
-2. `sql/postgres/indexes.sql`
-3. `sql/postgres/seed.sql`
+2. `sql/postgres/crm_staging.sql`
+3. `sql/postgres/indexes.sql`
+4. `sql/postgres/seed.sql`
 
 Run Snowflake scripts in this order with a sufficiently privileged role:
 

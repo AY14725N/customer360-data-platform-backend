@@ -18,6 +18,7 @@ class Settings(BaseSettings):
     postgres_db: str = "customer360"
     postgres_user: str = "customer360"
     postgres_password: str = "customer360"
+    crm_api_token: str | None = None
     kafka_bootstrap_servers: str = "localhost:29092"
     kafka_group_id: str = "customer360"
     raw_storage_path: Path = Path("storage/raw")
